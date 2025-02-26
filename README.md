@@ -28,14 +28,14 @@ This project is an AI-powered SQL agent built using **FastAPI**, **LangChain**, 
 
 ### 1️⃣ **Clone the Repository**
 ```bash
- git clone https://github.com/your-repo/sql-agent-api.git
+ git clone https://github.com/samratabduljalil/DBot
  cd sql-agent-api
 ```
 
-### 2️⃣ **Set Up Python Environment**
+### 2️⃣ **Set Up Conda Environment**
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+conda create --name sql-agent python=3.9 -y
+conda activate sql-agent
 ```
 
 ### 3️⃣ **Install Dependencies**
@@ -53,9 +53,9 @@ ollama pull llama3:latest  # Ensure the required model is downloaded
 ### 5️⃣ **Set Up MySQL Database**
 Modify the `DATABASE_URL` in `main.py` to match your MySQL credentials:
 ```python
-DATABASE_URL = "mysql+pymysql://root@localhost/ocr"
+DATABASE_URL = "mysql+pymysql://root@localhost/yourdatabase"
 ```
-Ensure your MySQL server is running and the `ocr` database exists.
+Ensure your MySQL server is running and the `yourdatabase` database exists.
 
 ### 6️⃣ **Run the API Server**
 ```bash
@@ -64,6 +64,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 The API will be available at: **`http://127.0.0.1:8000`**
 
 ---
+
 
 ⚠️ **Note:** This project is still under active development. Expect frequent updates and improvements. 🚀
 
