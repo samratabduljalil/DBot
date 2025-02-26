@@ -46,8 +46,11 @@ pip install -r requirements.txt
 ### 4️⃣ **Run Ollama LLM Locally**
 Make sure you have [Ollama installed](https://ollama.ai/) and start the LLM server:
 ```bash
-ollama serve
+
 ollama pull llama3:latest  # Ensure the required model is downloaded
+set OLLAMA_HOST=127.0.0.1:12345
+ollama serve
+
 ```
 
 ### 5️⃣ **Set Up MySQL Database**
