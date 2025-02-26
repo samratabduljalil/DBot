@@ -24,9 +24,10 @@ sql_agent = create_sql_agent(
     db=db,
     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
     verbose=True,
+     extra_prompt_messages=[enhanced_prompt],
     extra_tools=[insert_tool, delete_tool, update_tool, select_tool]  # ✅ Ensure tools are correctly attached
 )
-agent_executor = AgentExecutor(agent=sql_agent, tools=[insert_tool, delete_tool, update_tool, select_tool], verbose=True)
+agent_executor = AgentExecutor(agent=sql_agent, tools=[insert_tool, delete_tool, update_tool, select_tool],handle_parsing_errors=True, verbose=True)
 @app.get("/")
 def home():
     return {"message": "Welcome to the Enhanced SQL Agent API with Full Tool Support"}
