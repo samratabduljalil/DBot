@@ -36,7 +36,7 @@ cd sql-agent-api
 
 ### 2️⃣ **Set Up Conda Environment**
 ```bash
-conda create --name sql-agent python=3.9 -y
+conda create -n sql-agent python=3.10 
 conda activate sql-agent
 ```
 
