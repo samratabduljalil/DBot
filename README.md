@@ -67,7 +67,6 @@ uvicorn app:app --reload
 The API will be available at: **`http://127.0.0.1:8000`**
 
 ### 7️⃣ **Run the Frontend (Streamlit UI)**
-Navigate to the frontend directory and run:
 ```bash
 streamlit run frontend.py
 ```
