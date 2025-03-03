@@ -62,7 +62,7 @@ Ensure your MySQL server is running and the `yourdatabase` database exists.
 
 ### 6️⃣ **Run the API Server**
 ```bash
-uvicorn main:app --reload
+uvicorn app:app --reload
 ```
 The API will be available at: **`http://127.0.0.1:8000`**
 
